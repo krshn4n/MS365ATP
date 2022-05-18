@@ -1,0 +1,3 @@
+//to find connections made by msiexec. query maynot be efficient as of now. Not all search results be malicious, need to filter out according to your environment.
+DeviceEvents
+| where InitiatingProcessCommandLine contains "msiexec" and InitiatingProcessCommandLine matches regex @'\w\w\w\w:\S+'
